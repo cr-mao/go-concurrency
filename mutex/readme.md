@@ -1,5 +1,7 @@
 ## mutex 
 
+
+
 1. 检测是否有竞争
 ```shell
 go run -race no_lock.go 
