@@ -4,7 +4,15 @@ go 并发相关总结
 
 
 - 同步原语
-  - Mutex
+  - sync.Mutex
+  - sync.RWMutex
+  - sync.Once
+  - sync.Cond
+  - sync.Map
+  - sync.WaitGroup
+  - sync.Pool
+
+
 
 
 
