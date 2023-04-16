@@ -3,14 +3,16 @@
 go 并发相关总结
 
 
-- 同步原语
-  - sync.Mutex
-  - sync.RWMutex
-  - sync.Once
-  - sync.Cond
-  - sync.Map
-  - sync.WaitGroup
-  - sync.Pool
+- sync.Mutex
+- sync.RWMutex
+- sync.Once
+- sync.Cond
+- sync.Map
+- sync.WaitGroup
+- sync.Pool
+- channel
+- context
+- 内存模型
 
 
 如何选择
@@ -20,6 +22,8 @@ go 并发相关总结
 4. 简单等待所有任务的完成用 WaitGroup，也有 Channel 的推崇者用 Channel，都可以；
 5. 需要和 Select 语句结合，使用 Channel；
 6. 需要和超时配合时，使用 Channel 和 Context。
+
+[go中happens-before 保证](memory/readme.md)
 
 
 ## links
