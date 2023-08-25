@@ -2,7 +2,6 @@
 
 go 并发相关总结
 
-
 - sync.Mutex
 - sync.RWMutex
 - sync.Once
@@ -24,6 +23,7 @@ go 并发相关总结
 6. 需要和超时配合时，使用 Channel 和 Context。
 
 [go中happens-before 保证](memory/readme.md)
+
 
 
 ## links
