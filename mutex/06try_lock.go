@@ -24,7 +24,7 @@ func main() {
 	var c Counter2
 	c.Lock()
 	c.count++
-	foo2(c)
+	foo2(c) // fmt.Println("try lock return false")
 	c.Unlock()
-	fmt.Println(c.count)
+	fmt.Println(c.count) // 1
 }

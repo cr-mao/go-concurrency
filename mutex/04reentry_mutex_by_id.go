@@ -24,6 +24,7 @@ func GoID() int {
 	return id
 }
 
+// 可重入锁
 type RecursiveMutex struct {
 	sync.Mutex
 	owner     int64
