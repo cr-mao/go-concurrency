@@ -23,3 +23,6 @@ wg.Done() //panic
 noCopy 辅助检查，vet工具 
 
 
+
+用这里的并发原语，可以减少犯错
+https://github.com/sourcegraph/conc 
