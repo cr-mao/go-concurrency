@@ -89,3 +89,36 @@ func (p *Pool) Put(x any) {
 	}
 }
 ```
+
+
+### sync.Pool的使用陷阱
+
+看一段 bufpool.go  这里其实有内存浪费的电。
+
+如果要放回元素的 cap 很大， 那么所占用的空间依然很大。
+
+解决办法： 将元素放回时，增加检测逻辑，如果要放回的元素超过一定大小的 buffer，就直接丢弃，不再放回池子。
+
+
+
+
+
+### tcp连接池
+
+fatih/pool   其实是稳定的。基于 channel 实现
+
+
+
+
+### memcached Client 连接池
+还可以用 切片维护连接池
+https://github.com/bradfitz/gomemcache/blob/master/memcache/memcache.go
+
+freelist[:len(freelist)-1]
+
+put的使用 append(freelist, cn)
+
+
+### net/rpc 中的 Request/Response 对象池
+
+使用链表使用
